@@ -7,17 +7,43 @@ class Pantalla1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.brown[100],
       appBar: AppBar(
         title: const Text("Pantalla 1 Jose Beltran"),
       ),
-      body: Center(
-        child: ElevatedButton(
-          child: const Text("Vamos a la Pantalla2"),
-          onPressed: () {
-            Navigator.pushNamed(context, "/pantalla2",
-                arguments: "Mensaje desde la pantalla 1");
-          },
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Align(
+            alignment: Alignment.center,
+          ),
+          Text(
+            "Hola mundo!",
+            style: TextStyle(color: Colors.brown, fontSize: 50),
+          ),
+          Icon(
+            Icons.audiotrack,
+            color: Colors.deepPurple[200],
+            size: 200,
+          ),
+          ElevatedButton(
+            child: const Text("Vamos a la Pantalla2"),
+            onPressed: () {
+              Navigator.pushNamed(context, "/pantalla2",
+                  arguments: "Mensaje desde la pantalla 1");
+            }, //Pressed
+          ),
+          Card(
+            child: Padding(
+              padding: EdgeInsets.all(16),
+              child: Text(
+                "Tarjeta Beltran",
+                style: TextStyle(fontSize: 30, color: Colors.white),
+              ),
+            ),
+            color: Colors.brown,
+          )
+        ],
       ),
     );
   } //widget
