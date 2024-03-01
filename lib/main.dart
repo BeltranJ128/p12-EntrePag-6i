@@ -10,6 +10,7 @@ class RutasPaginas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(primarySwatch: Colors.brown),
       debugShowCheckedModeBanner: false,
       title: "app entre paginas",
       initialRoute: "/",
